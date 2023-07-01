@@ -13,8 +13,8 @@ void* incrementar(void* arg) {
 }
 
 int main() {
+
     pthread_t threads[5];
-    
     for (int i = 0; i < 5; i++) {
         pthread_create(&threads[i], NULL, incrementar, NULL);
     }
@@ -24,6 +24,6 @@ int main() {
     }
     
     printf("Valor final do contador: %d\n", contador);
-    
     return 0;
 }
+

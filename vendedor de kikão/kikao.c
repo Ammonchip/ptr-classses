@@ -14,6 +14,7 @@ pthread_mutex_t estoque_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t estoque_vazio = PTHREAD_COND_INITIALIZER;
 
 void* fornecedor(void* arg) {
+    
     char* ingrediente = (char*)arg;
 
     while (true) {
